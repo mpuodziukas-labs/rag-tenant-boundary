@@ -1,0 +1,9 @@
+{
+ "codes": [],
+ "exit": 0,
+ "queries": {
+  "q1": "PASS",
+  "q2": "PASS"
+ },
+ "verdict": "PASS"
+}

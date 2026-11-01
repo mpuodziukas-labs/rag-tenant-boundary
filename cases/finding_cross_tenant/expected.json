@@ -1,0 +1,11 @@
+{
+ "codes": [
+  "CROSS_TENANT"
+ ],
+ "exit": 1,
+ "queries": {
+  "x1": "FINDING",
+  "x2": "PASS"
+ },
+ "verdict": "FINDING"
+}

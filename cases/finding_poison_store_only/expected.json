@@ -1,0 +1,10 @@
+{
+ "codes": [
+  "POISON_STORE"
+ ],
+ "exit": 1,
+ "queries": {
+  "q1": "PASS"
+ },
+ "verdict": "FINDING"
+}

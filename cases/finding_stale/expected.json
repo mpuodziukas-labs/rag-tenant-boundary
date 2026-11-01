@@ -1,0 +1,11 @@
+{
+ "codes": [
+  "STALE"
+ ],
+ "exit": 1,
+ "queries": {
+  "q1": "PASS",
+  "q2": "PASS"
+ },
+ "verdict": "FINDING"
+}

@@ -1,0 +1,13 @@
+{
+ "codes": [
+  "ANSWER_LEAK",
+  "CROSS_TENANT",
+  "POISON_RETRIEVED",
+  "STALE"
+ ],
+ "exit": 1,
+ "queries": {
+  "q1": "FINDING"
+ },
+ "verdict": "FINDING"
+}

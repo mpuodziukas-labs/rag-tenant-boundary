@@ -1,0 +1,210 @@
+{
+  "matched": 34,
+  "total": 34,
+  "cases": [
+    {
+      "case": "exit2_log_file_missing",
+      "expected": "{\"codes\": [], \"exit\": 2, \"verdict\": null}",
+      "got": "{\"codes\": [], \"exit\": 2, \"verdict\": null}",
+      "match": true
+    },
+    {
+      "case": "exit2_manifest_not_json",
+      "expected": "{\"codes\": [], \"exit\": 2, \"verdict\": null}",
+      "got": "{\"codes\": [], \"exit\": 2, \"verdict\": null}",
+      "match": true
+    },
+    {
+      "case": "finding_answer_leak_at_bound",
+      "expected": "{\"codes\": [\"ANSWER_LEAK\"], \"exit\": 1, \"queries\": {\"q1\": \"FINDING\"}, \"verdict\": \"FINDING\"}",
+      "got": "{\"codes\": [\"ANSWER_LEAK\"], \"exit\": 1, \"queries\": {\"q1\": \"FINDING\"}, \"verdict\": \"FINDING\"}",
+      "match": true
+    },
+    {
+      "case": "finding_answer_leak_case_and_space_folded",
+      "expected": "{\"codes\": [\"ANSWER_LEAK\"], \"exit\": 1, \"queries\": {\"q1\": \"FINDING\"}, \"verdict\": \"FINDING\"}",
+      "got": "{\"codes\": [\"ANSWER_LEAK\"], \"exit\": 1, \"queries\": {\"q1\": \"FINDING\"}, \"verdict\": \"FINDING\"}",
+      "match": true
+    },
+    {
+      "case": "finding_answer_leak_not_retrieved",
+      "expected": "{\"codes\": [\"ANSWER_LEAK\"], \"exit\": 1, \"queries\": {\"q1\": \"FINDING\"}, \"verdict\": \"FINDING\"}",
+      "got": "{\"codes\": [\"ANSWER_LEAK\"], \"exit\": 1, \"queries\": {\"q1\": \"FINDING\"}, \"verdict\": \"FINDING\"}",
+      "match": true
+    },
+    {
+      "case": "finding_combined",
+      "expected": "{\"codes\": [\"ANSWER_LEAK\", \"CROSS_TENANT\", \"POISON_RETRIEVED\", \"STALE\"], \"exit\": 1, \"queries\": {\"q1\": \"FINDING\"}, \"verdict\": \"FINDING\"}",
+      "got": "{\"codes\": [\"ANSWER_LEAK\", \"CROSS_TENANT\", \"POISON_RETRIEVED\", \"STALE\"], \"exit\": 1, \"queries\": {\"q1\": \"FINDING\"}, \"verdict\": \"FINDING\"}",
+      "match": true
+    },
+    {
+      "case": "finding_cross_tenant",
+      "expected": "{\"codes\": [\"CROSS_TENANT\"], \"exit\": 1, \"queries\": {\"x1\": \"FINDING\", \"x2\": \"PASS\"}, \"verdict\": \"FINDING\"}",
+      "got": "{\"codes\": [\"CROSS_TENANT\"], \"exit\": 1, \"queries\": {\"x1\": \"FINDING\", \"x2\": \"PASS\"}, \"verdict\": \"FINDING\"}",
+      "match": true
+    },
+    {
+      "case": "finding_poison_retrieved_ignore",
+      "expected": "{\"codes\": [\"POISON_RETRIEVED\"], \"exit\": 1, \"queries\": {\"q1\": \"FINDING\", \"q2\": \"PASS\"}, \"verdict\": \"FINDING\"}",
+      "got": "{\"codes\": [\"POISON_RETRIEVED\"], \"exit\": 1, \"queries\": {\"q1\": \"FINDING\", \"q2\": \"PASS\"}, \"verdict\": \"FINDING\"}",
+      "match": true
+    },
+    {
+      "case": "finding_poison_role_prefix",
+      "expected": "{\"codes\": [\"POISON_RETRIEVED\"], \"exit\": 1, \"queries\": {\"q1\": \"PASS\", \"q2\": \"FINDING\"}, \"verdict\": \"FINDING\"}",
+      "got": "{\"codes\": [\"POISON_RETRIEVED\"], \"exit\": 1, \"queries\": {\"q1\": \"PASS\", \"q2\": \"FINDING\"}, \"verdict\": \"FINDING\"}",
+      "match": true
+    },
+    {
+      "case": "finding_poison_role_tag",
+      "expected": "{\"codes\": [\"POISON_RETRIEVED\"], \"exit\": 1, \"queries\": {\"q1\": \"PASS\", \"q2\": \"FINDING\"}, \"verdict\": \"FINDING\"}",
+      "got": "{\"codes\": [\"POISON_RETRIEVED\"], \"exit\": 1, \"queries\": {\"q1\": \"PASS\", \"q2\": \"FINDING\"}, \"verdict\": \"FINDING\"}",
+      "match": true
+    },
+    {
+      "case": "finding_poison_store_only",
+      "expected": "{\"codes\": [\"POISON_STORE\"], \"exit\": 1, \"queries\": {\"q1\": \"PASS\"}, \"verdict\": \"FINDING\"}",
+      "got": "{\"codes\": [\"POISON_STORE\"], \"exit\": 1, \"queries\": {\"q1\": \"PASS\"}, \"verdict\": \"FINDING\"}",
+      "match": true
+    },
+    {
+      "case": "finding_stale",
+      "expected": "{\"codes\": [\"STALE\"], \"exit\": 1, \"queries\": {\"q1\": \"PASS\", \"q2\": \"PASS\"}, \"verdict\": \"FINDING\"}",
+      "got": "{\"codes\": [\"STALE\"], \"exit\": 1, \"queries\": {\"q1\": \"PASS\", \"q2\": \"PASS\"}, \"verdict\": \"FINDING\"}",
+      "match": true
+    },
+    {
+      "case": "pass_age_exactly_at_max",
+      "expected": "{\"codes\": [], \"exit\": 0, \"queries\": {\"q1\": \"PASS\", \"q2\": \"PASS\"}, \"verdict\": \"PASS\"}",
+      "got": "{\"codes\": [], \"exit\": 0, \"queries\": {\"q1\": \"PASS\", \"q2\": \"PASS\"}, \"verdict\": \"PASS\"}",
+      "match": true
+    },
+    {
+      "case": "pass_answer_below_bound",
+      "expected": "{\"codes\": [], \"exit\": 0, \"queries\": {\"q1\": \"PASS\"}, \"verdict\": \"PASS\"}",
+      "got": "{\"codes\": [], \"exit\": 0, \"queries\": {\"q1\": \"PASS\"}, \"verdict\": \"PASS\"}",
+      "match": true
+    },
+    {
+      "case": "pass_answer_leak_one_under_bound",
+      "expected": "{\"codes\": [], \"exit\": 0, \"queries\": {\"q1\": \"PASS\"}, \"verdict\": \"PASS\"}",
+      "got": "{\"codes\": [], \"exit\": 0, \"queries\": {\"q1\": \"PASS\"}, \"verdict\": \"PASS\"}",
+      "match": true
+    },
+    {
+      "case": "pass_answer_quotes_own_chunk",
+      "expected": "{\"codes\": [], \"exit\": 0, \"queries\": {\"q1\": \"PASS\"}, \"verdict\": \"PASS\"}",
+      "got": "{\"codes\": [], \"exit\": 0, \"queries\": {\"q1\": \"PASS\"}, \"verdict\": \"PASS\"}",
+      "match": true
+    },
+    {
+      "case": "pass_clean",
+      "expected": "{\"codes\": [], \"exit\": 0, \"queries\": {\"q1\": \"PASS\", \"q2\": \"PASS\"}, \"verdict\": \"PASS\"}",
+      "got": "{\"codes\": [], \"exit\": 0, \"queries\": {\"q1\": \"PASS\", \"q2\": \"PASS\"}, \"verdict\": \"PASS\"}",
+      "match": true
+    },
+    {
+      "case": "pass_role_in_acl",
+      "expected": "{\"codes\": [], \"exit\": 0, \"queries\": {\"r1\": \"PASS\"}, \"verdict\": \"PASS\"}",
+      "got": "{\"codes\": [], \"exit\": 0, \"queries\": {\"r1\": \"PASS\"}, \"verdict\": \"PASS\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_acl_empty",
+      "expected": "{\"codes\": [\"ACL_MISSING\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"ACL_MISSING\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_acl_missing",
+      "expected": "{\"codes\": [\"ACL_MISSING\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"ACL_MISSING\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_dim_mixed",
+      "expected": "{\"codes\": [\"DIM_MIXED\", \"DIM_POLICY\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"DIM_MIXED\", \"DIM_POLICY\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_dim_policy_only",
+      "expected": "{\"codes\": [\"DIM_POLICY\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"DIM_POLICY\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_duplicate_chunk",
+      "expected": "{\"codes\": [\"DUP_CHUNK\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"DUP_CHUNK\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_hash_mismatch",
+      "expected": "{\"codes\": [\"HASH_MISMATCH\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"HASH_MISMATCH\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_log_duplicate_query",
+      "expected": "{\"codes\": [\"LOG_DUP\"], \"exit\": 1, \"queries\": {\"q1\": \"REFUSE\"}, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"LOG_DUP\"], \"exit\": 1, \"queries\": {\"q1\": \"REFUSE\"}, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_log_empty",
+      "expected": "{\"codes\": [\"LOG_EMPTY\"], \"exit\": 1, \"queries\": {}, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"LOG_EMPTY\"], \"exit\": 1, \"queries\": {}, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_log_malformed_line",
+      "expected": "{\"codes\": [\"LOG_MALFORMED\"], \"exit\": 1, \"queries\": {\"q1\": \"PASS\"}, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"LOG_MALFORMED\"], \"exit\": 1, \"queries\": {\"q1\": \"PASS\"}, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_log_scores_length",
+      "expected": "{\"codes\": [\"LOG_MALFORMED\"], \"exit\": 1, \"queries\": {\"q2\": \"PASS\"}, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"LOG_MALFORMED\"], \"exit\": 1, \"queries\": {\"q2\": \"PASS\"}, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_manifest_field_missing",
+      "expected": "{\"codes\": [\"MANIFEST_FIELD\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"MANIFEST_FIELD\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_orphan_retrieval",
+      "expected": "{\"codes\": [\"ORPHAN_RETRIEVAL\"], \"exit\": 1, \"queries\": {\"q1\": \"REFUSE\", \"q2\": \"PASS\"}, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"ORPHAN_RETRIEVAL\"], \"exit\": 1, \"queries\": {\"q1\": \"REFUSE\", \"q2\": \"PASS\"}, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_policy_acl_not_required",
+      "expected": "{\"codes\": [\"POLICY_INVALID\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"POLICY_INVALID\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_query_tenant_unknown",
+      "expected": "{\"codes\": [\"CROSS_TENANT\", \"TENANT_UNKNOWN\"], \"exit\": 1, \"queries\": {\"q1\": \"REFUSE\"}, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"CROSS_TENANT\", \"TENANT_UNKNOWN\"], \"exit\": 1, \"queries\": {\"q1\": \"REFUSE\"}, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_text_missing",
+      "expected": "{\"codes\": [\"TEXT_MISSING\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"TEXT_MISSING\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "match": true
+    },
+    {
+      "case": "refuse_unsafe_chunk_id",
+      "expected": "{\"codes\": [\"MANIFEST_FIELD\", \"ORPHAN_RETRIEVAL\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "got": "{\"codes\": [\"MANIFEST_FIELD\", \"ORPHAN_RETRIEVAL\"], \"exit\": 1, \"verdict\": \"REFUSE\"}",
+      "match": true
+    }
+  ]
+}

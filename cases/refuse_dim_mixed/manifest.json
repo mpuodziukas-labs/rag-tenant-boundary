@@ -1,0 +1,70 @@
+{
+ "chunks": [
+  {
+   "acl": [
+    "alpha"
+   ],
+   "chunk_id": "a1",
+   "embedding_dim": 384,
+   "ingested_at": "2026-10-20",
+   "sha256": "5db1edbdd85e11ac5476c3a00f4523f85782dac0f8ebb0c6b1179efcae6f690d",
+   "source_doc": "doc-a1.md",
+   "tenant": "alpha"
+  },
+  {
+   "acl": [
+    "alpha"
+   ],
+   "chunk_id": "a2",
+   "embedding_dim": 384,
+   "ingested_at": "2026-10-20",
+   "sha256": "09615de0f7a7c4e1f4f35b44e9b6a15e6fc514e77a7d4108ca479467106ee06f",
+   "source_doc": "doc-a2.md",
+   "tenant": "alpha"
+  },
+  {
+   "acl": [
+    "beta"
+   ],
+   "chunk_id": "b1",
+   "embedding_dim": 384,
+   "ingested_at": "2026-10-20",
+   "sha256": "7dc6a9bad1293119d4e2069ec679fb164af4d046ff913c55339f10355530fb35",
+   "source_doc": "doc-b1.md",
+   "tenant": "beta"
+  },
+  {
+   "acl": [
+    "beta"
+   ],
+   "chunk_id": "b2",
+   "embedding_dim": 768,
+   "ingested_at": "2026-10-20",
+   "sha256": "399c991e6bf53d814e508c4c3ca9f5ca970a2679e472214c7798c994c5e6ad0a",
+   "source_doc": "doc-b2.md",
+   "tenant": "beta"
+  },
+  {
+   "acl": [
+    "alpha",
+    "beta"
+   ],
+   "chunk_id": "s1",
+   "embedding_dim": 384,
+   "ingested_at": "2026-10-20",
+   "sha256": "2851588b9112ff0cd12cf0d80a5f500301c7554b1a3d7a245d4b55683f47f49b",
+   "source_doc": "doc-s1.md",
+   "tenant": "alpha"
+  }
+ ],
+ "policy": {
+  "allowed_tenants": [
+   "alpha",
+   "beta"
+  ],
+  "as_of": "2026-11-01",
+  "embedding_dim": 384,
+  "max_chunk_age_days": 90,
+  "require_acl": true
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "codes": [
+  "LOG_MALFORMED"
+ ],
+ "exit": 1,
+ "queries": {
+  "q1": "PASS"
+ },
+ "verdict": "REFUSE"
+}

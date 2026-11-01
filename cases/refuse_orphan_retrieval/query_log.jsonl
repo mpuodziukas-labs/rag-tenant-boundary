@@ -1,0 +1,2 @@
+{"answer": "Here is a short, harmless summary.", "chunk_ids": ["a1", "zz9"], "query_id": "q1", "scores": [0.9, 0.8], "tenant": "alpha"}
+{"answer": "Here is a short, harmless summary.", "chunk_ids": ["b1"], "query_id": "q2", "scores": [0.9], "tenant": "beta"}

@@ -1,0 +1,11 @@
+{
+ "codes": [
+  "POISON_RETRIEVED"
+ ],
+ "exit": 1,
+ "queries": {
+  "q1": "PASS",
+  "q2": "FINDING"
+ },
+ "verdict": "FINDING"
+}

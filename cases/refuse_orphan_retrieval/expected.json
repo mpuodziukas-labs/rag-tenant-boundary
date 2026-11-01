@@ -1,0 +1,11 @@
+{
+ "codes": [
+  "ORPHAN_RETRIEVAL"
+ ],
+ "exit": 1,
+ "queries": {
+  "q1": "REFUSE",
+  "q2": "PASS"
+ },
+ "verdict": "REFUSE"
+}

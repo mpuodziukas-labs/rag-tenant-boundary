@@ -1,0 +1,10 @@
+{
+ "codes": [
+  "ANSWER_LEAK"
+ ],
+ "exit": 1,
+ "queries": {
+  "q1": "FINDING"
+ },
+ "verdict": "FINDING"
+}

@@ -1,0 +1,10 @@
+{
+ "codes": [
+  "LOG_DUP"
+ ],
+ "exit": 1,
+ "queries": {
+  "q1": "REFUSE"
+ },
+ "verdict": "REFUSE"
+}

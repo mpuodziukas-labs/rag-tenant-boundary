@@ -1,0 +1,8 @@
+{
+ "codes": [
+  "MANIFEST_FIELD",
+  "ORPHAN_RETRIEVAL"
+ ],
+ "exit": 1,
+ "verdict": "REFUSE"
+}
