@@ -6,9 +6,9 @@ Engineering evidence, not legal advice, no certification claimed. All data is sy
 
 ## The problem
 
-OWASP LLM08:2025 (Vector and Embedding Weaknesses) is about the embedding store itself: who may retrieve which chunk, whether the stored text is the text that was ingested, and whether retrieved text can steer the model. A groundedness check on the answer does not cover it. A multi-tenant store is usually trusted because the query filter "should" be set, with no record of what was actually retrieved and no check on what the answer repeated.
+OWASP LLM08:2025 (Vector and Embedding Weaknesses) is about the embedding store itself: who may retrieve which chunk, whether the stored text is the text that was ingested, and whether retrieved text can steer the model. A groundedness check on the answer does not cover it. A multi-tenant store is often trusted because the query filter should be set. Nothing records what was retrieved or what the answer repeated.
 
-This repo is one CLI, `python3 gate.py`, that turns a store manifest and a retrieval log into a verdict, an exit code and an optional JSON report.
+This repo is one CLI, `python3 gate.py`. It turns a store manifest and a retrieval log into a verdict, an exit code and an optional JSON report.
 
 ## Run it
 
@@ -60,7 +60,6 @@ The cases are synthetic and were written for this repository. No language model 
 
 ## Limitations
 
-- Engineering evidence, not legal advice, no certification claimed.
 - The manifest and the log are the evidence. A retrieval that was never logged, or a log that was edited, is not seen.
 - Instruction patterns and substring overlap find shapes, not intent. A paraphrased leak below the bound, or a new injection phrasing, can pass.
 - The acl model is tenant name or role name equality. It does not evaluate group nesting, expiry or attribute rules.

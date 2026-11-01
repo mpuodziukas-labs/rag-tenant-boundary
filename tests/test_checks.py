@@ -490,3 +490,14 @@ def test_report_path_unwritable_is_exit_two(tmp_path):
     mp, lp = store(tmp_path)
     rc, out, err = call([mp, lp, "--report", os.path.join(str(tmp_path), "no", "such", "dir", "r.json")])
     assert rc == 2 and "cannot write report" in err
+
+
+def test_deeply_nested_log_line_is_a_refusal_not_a_crash(tmp_path):
+    rc, rep, out = run(tmp_path, raw_log="[" * 200000 + "\n")
+    assert rc == 1 and "LOG_MALFORMED" in codes(rep)
+
+
+def test_deeply_nested_manifest_is_exit_two(tmp_path):
+    mp, lp = store(tmp_path, raw_man="[" * 200000)
+    rc, out, err = call([mp, lp])
+    assert rc == 2 and "BAD INPUT" in err

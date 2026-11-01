@@ -57,3 +57,12 @@ def test_case_folders_cover_pass_finding_and_refuse_for_every_check():
         assert w in names, w
     for n in names:
         assert os.path.exists(os.path.join(CASES, n, "expected.json")), n
+
+
+def test_evaluate_rejects_arguments_it_does_not_take():
+    import subprocess
+    import sys as _sys
+    here = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    r = subprocess.run([_sys.executable, os.path.join(here, "evaluate.py"), "--bogus"],
+                       capture_output=True, text=True)
+    assert r.returncode == 2 and "usage" in r.stderr and r.stdout == ""

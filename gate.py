@@ -69,7 +69,10 @@ def _bad_const(name):
 
 def parse_json(text: str):
     """Strict JSON: duplicate keys and NaN or Infinity are errors."""
-    return json.loads(text, object_pairs_hook=_no_dup_pairs, parse_constant=_bad_const)
+    try:
+        return json.loads(text, object_pairs_hook=_no_dup_pairs, parse_constant=_bad_const)
+    except RecursionError:
+        raise ValueError("nesting too deep")
 
 
 def is_int(v) -> bool:
