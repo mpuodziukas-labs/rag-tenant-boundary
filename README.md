@@ -65,5 +65,4 @@ The cases are synthetic and were written for this repository. No language model 
 - The acl model is tenant name or role name equality. It does not evaluate group nesting, expiry or attribute rules.
 - The leak check compares the answer with chunk text. It does not read the embedding vectors, so it cannot see a leak through similarity alone.
 - The mutation check seeds defects in `gate.py` only. It does not prove the absence of other defects.
-- `tests/dbg_runner.py` is an empty stub left from the build.
 - Numbers for cases, tests and mutants are those the runner prints. This file states none of its own.
